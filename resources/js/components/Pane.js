@@ -73,4 +73,16 @@ class Pane extends Component {
                       <Route exact path="/Wishlist" component={Wishlist} />
                       <Route exact path="/Checkout" component={Checkout} />
                       <Route exact path="/Single_products" component={Single_products} />
-                
+                  </div>
+             </div>
+          </nav>
+       </div>
+    </Router>
+  </div>
+  
+		);
+	}
+}
+
+
+export default Pane;
