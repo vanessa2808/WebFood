@@ -18,7 +18,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/About', 'HomeController@About')->name('About');
 Route::get('/welcome', 'HomeController@welcome')->name('welcome');
-Route::get('/login', 'HomeController@login')->name('login');
+Route::get('/LoginPage', 'HomeController@login');
 // Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 Route::post('/admin/products/add_products', 'ProductController@post_add')->name('get_products');
 Route::get('/admin/products/add_products','ProductController@get_add')->name('add_products');
@@ -45,4 +45,4 @@ Route::get('/admin/blog/list_blog','BlogController@list_blog')->name('list_blog'
 Route::get('/admin/mailbox/mailbox','mailController@list_mail')->name('list_mail');
 Route::get('ckeditor', 'CkeditorController@index');
 Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
-Auth::routes();
+//Auth::routes();

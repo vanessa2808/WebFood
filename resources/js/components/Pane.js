@@ -20,29 +20,9 @@ class Pane extends Component {
 	render() {
 		return(
       <div>
-        <Router>
+        <BrowserRouter>
           <div>
-        <div className="py-1 bg-primary">
-          <div className="container">
-            <div className="row no-gutters d-flex align-items-start align-items-center px-md-0">
-              <div className="col-lg-12 d-block">
-                <div className="row d-flex">
-                  <div className="col-md pr-4 d-flex topper align-items-center">
-                    <div className="icon mr-2 d-flex justify-content-center align-items-center"><span className="icon-phone2" /></div>
-                    <span className="text">+ 1235 2355 98</span>
-                  </div>
-                  <div className="col-md pr-4 d-flex topper align-items-center">
-                    <div className="icon mr-2 d-flex justify-content-center align-items-center"><span className="icon-paper-plane" /></div>
-                    <span className="text">yenrion9941@email.com</span>
-                  </div>
-                  <div className="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-                    <span className="text">3-5 Business days delivery &amp; Free Returns</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
         <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light " id="ftco-navbar">
           <div className="container">
             <a className="navbar-brand" href="index.html">Vegefoods</a>
@@ -56,16 +36,13 @@ class Pane extends Component {
                 <li className="nav-item"><Link to="/About" className="nav-link">About</Link></li>
                 <li className="nav-item"><Link to="/Blog" className="nav-link">Blog</Link></li>
                 <li className="nav-item"><Link to="/Contact" className="nav-link">Contact</Link></li>
-                <li className="nav-item"><Link to="/Login" className="nav-link">Login</Link></li>
-                <li className="nav-item"><Link to="/Register" className="nav-link">Register</Link></li>
+                
 
                 <li className="nav-item cta cta-colored"><Link to="/Cart" className="nav-link"><span className="icon-shopping_cart" />[0]</Link></li>
               </ul>
               <Route exact path="/"  component={Home} />
                       <Route exact path="/Home" component={Home} />
-                      <Route exact path="/Login" component={Login} />
                       <Route exact path="/About" component={About} />
-                      <Route exact path="/Register" component={Register} />
                       <Route exact path="/Blog" component={Blog} />
                       <Route exact path="/Contact" component={Contact} />
                       <Route exact path="/Cart" component={Cart} />
@@ -77,7 +54,7 @@ class Pane extends Component {
              </div>
           </nav>
        </div>
-    </Router>
+    </BrowserRouter>
   </div>
   
 		);
