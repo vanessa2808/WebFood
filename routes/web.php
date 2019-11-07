@@ -1,9 +1,6 @@
 <?php
 
-// Route::get('/', function() {
-//     $products = DB::table('products')->get();
-//     return $products;
-// });
+
 Route::get('/', function () {
     return view('welcome'); 
 });

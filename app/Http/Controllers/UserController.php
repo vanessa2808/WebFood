@@ -14,6 +14,7 @@ public function get_addUsers() {
         return view('admin.users.add_users');
     }
     public function post_addUSers(Request $request) {
+      
         $name = $request->name;
         $email = $request->email;
         $password =  Hash::make($request->password);
@@ -43,7 +44,7 @@ public function get_addUsers() {
     public function post_editUsers($id, Request $request) {
       $users = DB::table('users')->find($id);
         $name = $request->name;
-       // dd($name);
+       $role = $request->role;
         $email = $request->email;
         $password = $request->password;
         $updated_at = date('Y-m-d h:i:s');
@@ -53,7 +54,7 @@ public function get_addUsers() {
             $avatar = $file->getClientOriginalName();
             $file->move('admin/uploads/users', $avatar);
         }
-        DB::update('UPDATE users SET name = ?, email = ?, password = ?, updated_at = ?, avatar = ? where id = ?', [$name, $email, $password, $updated_at, $avatar, $id]);
+        DB::update('UPDATE users SET  role = ?,name = ?, email = ?, password = ?, updated_at = ?, avatar = ? where id = ?', [$role, $name, $email, $password, $updated_at, $avatar, $id]);
         return redirect('admin/users/list_users');
     }
 }
