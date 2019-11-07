@@ -1,75 +1,59 @@
 <?php
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\User;
-use JWTAuth;
-use JWTAuthException;
+use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
-    private function getToken($email, $password)
+     public function __construct()
     {
-        $token = null;
-        //$credentials = $request->only('email', 'password');
-        try {
-            if (!$token = JWTAuth::attempt( ['email'=>$email, 'password'=>$password])) {
-                return response()->json([
-                    'response' => 'error',
-                    'message' => 'Password or email is invalid',
-                    'token'=>$token
-                ]);
-            }
-        } catch (JWTAuthException $e) {
-            return response()->json([
-                'response' => 'error',
-                'message' => 'Token creation failed',
-            ]);
-        }
-        return $token;
+         $this->middleware('auth'); 
+         //$this->middleware('auth', ['except' => array('get_edit')]);   
     }
-    public function login(Request $request)
-    {
-        $user = \App\User::where('email', $request->email)->get()->first();
-        if ($user && \Hash::check($request->password, $user->password)) // The passwords match...
-        {
-            $token = self::getToken($request->email, $request->password);
-            $user->auth_token = $token;
-            $user->save();
-            $response = ['success'=>true, 'data'=>['id'=>$user->id,'auth_token'=>$user->auth_token,'name'=>$user->name, 'email'=>$user->email]];           
-        }
-        else 
-          $response = ['success'=>false, 'data'=>'Record doesnt exists'];
-      
-        return response()->json($response, 201);
+public function get_addUsers() {
+        return view('admin.users.add_users');
     }
-    public function register(Request $request)
-    { 
-        $payload = [
-            'password'=>\Hash::make($request->password),
-            'email'=>$request->email,
-            'name'=>$request->name,
-            'auth_token'=> ''
-        ];
-                  
-        $user = new \App\User($payload);
-        if ($user->save())
-        {
-            
-            $token = self::getToken($request->email, $request->password); // generate user token
-            
-            if (!is_string($token))  return response()->json(['success'=>false,'data'=>'Token generation failed'], 201);
-            
-            $user = \App\User::where('email', $request->email)->get()->first();
-            
-            $user->auth_token = $token; // update user token
-            
-            $user->save();
-            
-            $response = ['success'=>true, 'data'=>['name'=>$user->name,'id'=>$user->id,'email'=>$request->email,'auth_token'=>$token]];        
+    public function post_addUSers(Request $request) {
+        $name = $request->name;
+        $email = $request->email;
+        $password =  Hash::make($request->password);
+        $created_at = date('Y-m-d h:i:s');
+        $avatar = 'default.png';
+        if ($request->hasfile('avatar')){
+          $file = $request->avatar; 
+          $avatar = $file->getClientOriginalName();
+          $file->move('admin/uploads/users', $avatar);
         }
-        else
-            $response = ['success'=>false, 'data'=>'Couldnt register user'];
-        
-        
-        return response()->json($response, 201);
+        DB::insert('INSERT INTO users (name, email,password, created_at, avatar) values (?, ?, ?, ?, ?)', [$name, $email, $password, $created_at, $avatar]);
+        return redirect('admin/users/list_users');
+    }
+      public function list_users(){
+        $users = DB::table('users')->get();
+      return view('admin/users/list_users', ['users'=>$users]);
+    }
+    public function delete_users($id) {
+       DB::table('users')->where('id', $id)->delete();
+     return redirect()->route('list_users');
+    }
+    public function get_editUsers($id) {
+      $users = DB::table('users')->find($id);
+    // dd($users);
+      return view('admin/users/edit_users', ['users'=>$users]);
+    }
+    public function post_editUsers($id, Request $request) {
+      $users = DB::table('users')->find($id);
+        $name = $request->name;
+       // dd($name);
+        $email = $request->email;
+        $password = $request->password;
+        $updated_at = date('Y-m-d h:i:s');
+        $avatar = $users->avatar;
+        if ($request->hasfile('avatar')){
+            $file = $request->avatar; 
+            $avatar = $file->getClientOriginalName();
+            $file->move('admin/uploads/users', $avatar);
+        }
+        DB::update('UPDATE users SET name = ?, email = ?, password = ?, updated_at = ?, avatar = ? where id = ?', [$name, $email, $password, $updated_at, $avatar, $id]);
+        return redirect('admin/users/list_users');
     }
 }

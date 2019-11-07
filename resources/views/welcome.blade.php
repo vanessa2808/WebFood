@@ -24,11 +24,10 @@
     <link rel="stylesheet" href="page/css/flaticon.css">
     <link rel="stylesheet" href="page/css/icomoon.css">
     <link rel="stylesheet" href="page/css/style.css">
+    
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
     function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <link rel="stylesheet" href="login/css/style.css" type="text/css" media="all" /> 
-    <link rel="stylesheet" href="login/css/font-awesome.css"> 
-    <link href="//fonts.googleapis.com/css?family=Snippet" rel="stylesheet">
+  
     
 </head>
 <body>  
@@ -52,8 +51,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="page/js/google-map.js"></script>
     <script src="page/js/main.js"></script>
-    <script type="text/javascript" src="login/js/jquery-2.1.4.min.js"></script><!--common-js-->
-    <script src="login/js/jquery.vide.min.js"></script><!--video-js-->
+
 
      @yield('script')
 </body>

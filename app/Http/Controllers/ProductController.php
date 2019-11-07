@@ -61,4 +61,8 @@ class ProductController extends Controller {
     $products = DB::table('products')->get();
       return view('admin/products/list_products', ['products'=>$products]);
   }
+  public function index(){
+      $products = products::all();
+      return reponse()->json($products);
     }
+  }

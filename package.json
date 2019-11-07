@@ -11,7 +11,6 @@
     },
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
-        "axios": "^0.19.0",
         "bootstrap": "^4.1.0",
         "cross-env": "^5.1",
         "jquery": "^3.4.1",
@@ -25,6 +24,8 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "@slate-editor/image-plugin": "^5.1.1",
+        "axios": "^0.19.0",
         "ckeditor": "^4.12.1",
         "downshift": "^3.4.1",
         "react-router-dom": "5.1.2"

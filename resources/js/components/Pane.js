@@ -2,13 +2,10 @@ import React, {Component} from 'react';
 import Home from "./Home";
 import Content from "./Content/Content";
 import Contact from "./Contact/Contact";
-import Shop from "./Shop/Shop";
+import Product from "./Product/Product";
 import Blog from "./Blog/Blog";
 import About from "./About/About";
-import Cart from "./Shop/Cart";
-import Checkout from "./Shop/Checkout";
-import Single_products from "./Shop/Single_products";
-import Wishlist from "./Shop/Wishlist";
+
 import Login from "./Login/Login";
 import Register from "./Register/Register";
 import { BrowserRouter as Router, Route, Link, NavLink, Switch } from "react-router-dom";
@@ -48,22 +45,11 @@ class Pane extends Component {
             <div className="collapse navbar-collapse" id="ftco-nav">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active"><Link to="/Home" className="nav-link">Home</Link></li>
-                <li className="nav-item dropdown">
-                  <Link className="nav-link dropdown-toggle" to="/" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</Link>
-                  <div className="dropdown-menu" aria-labelledby="dropdown04">
-                    <Link className="dropdown-item" to="/Shop">Shop</Link>
-                    <Link className="dropdown-item" to="/Wishlist">Wishlist</Link>
-                    
-                    <Link className="dropdown-item" to="/Single_products">Single Product</Link>
-                    <Link className="dropdown-item" to="/Cart">Cart</Link>
-                    <Link className="dropdown-item" to="/Checkout">Checkout</Link>
-                  </div>
-                </li>
+                <li className="nav-item"><Link to="/Product" className="nav-link">Product</Link></li>
                 <li className="nav-item"><Link to="/About" className="nav-link">About</Link></li>
                 <li className="nav-item"><Link to="/Blog" className="nav-link">Blog</Link></li>
                 <li className="nav-item"><Link to="/Contact" className="nav-link">Contact</Link></li>
-                <li className="nav-item"><Link to="/Login" className="nav-link">Login</Link></li>
-                <li className="nav-item"><Link to="/Register" className="nav-link">Register</Link></li>
+               
                 <li className="nav-item cta cta-colored"><Link to="/Cart" className="nav-link"><span className="icon-shopping_cart" />[0]</Link></li>
               </ul>
             </div>
@@ -73,17 +59,13 @@ class Pane extends Component {
         <Switch>
           <Route  path="/" exact component={Home} />
           <Route exact path="/Home" component={Home} />
-          <Route exact path="/Login" component={Login} />
+          
           <Route exact path="/About" component={About} />
-          <Route exact path="/Register" component={Register} />
+         <Route exact path="/Product" component={Product} />
           <Route exact path="/Blog" component={Blog} />
           <Route exact path="/Contact" component={Contact} />
-          <Route exact path="/Cart" component={Cart} />
-          <Route exact path="/Shop" component={Shop} />
-          <Route exact path="/Wishlist" component={Wishlist} />
-          <Route exact path="/Checkout" component={Checkout} />
-          <Route exact path="/Single_products" component={Single_products} />
          
+          
 
         </Switch>
       </Router>
