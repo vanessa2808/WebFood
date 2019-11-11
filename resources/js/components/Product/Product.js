@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 class Shop extends Component {
 	render() {
-   
 		return(
 			<div>
 			<div className="hero-wrap hero-bread" style={{backgroundImage: 'url("./images/bg_1.jpg")'}}>
@@ -387,15 +386,7 @@ class Shop extends Component {
     </div>
   </div>
 </section>
-
-
-
-      		</div>
-      
-     
- 
-	
-
+      </div>
 		);
 	}
 }
