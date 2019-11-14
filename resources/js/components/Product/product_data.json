@@ -1,0 +1,83 @@
+[
+    {
+        "id": 30,
+        "name": "Iphone",
+        "image": "tainan-02011483364653395-1549012825032.jpg",
+        "description": "jj",
+        "price": "20000000",
+        "created_at": "2019-09-27 12:00:23",
+        "updated_at": "2019-09-27 12:53:49"
+    },
+    {
+        "id": 31,
+        "name": "OppoA71",
+        "image": "60663857_436001600292751_5506733421679869952_o.jpg",
+        "description": "<p><strong>xinh</strong></p>",
+        "price": "20000000",
+        "created_at": "2019-09-27 12:00:43",
+        "updated_at": "2019-10-01 01:54:28"
+    },
+    {
+        "id": 32,
+        "name": "Iphone11",
+        "image": "a-15494560155292126468942-crop-1549456023777907255249.jpg",
+        "description": "ss",
+        "price": "20000000",
+        "created_at": "2019-09-30 07:02:54",
+        "updated_at": null
+    },
+    {
+        "id": 33,
+        "name": "Apple11",
+        "image": "52297904_395037364389175_8166579450884915200_n.jpg",
+        "description": "<p>xinh</p>",
+        "price": "2000",
+        "created_at": "2019-10-01 03:10:49",
+        "updated_at": null
+    },
+    {
+        "id": 36,
+        "name": "Iphone33",
+        "image": "64678050_465151570711087_2199961023006375936_n.jpg",
+        "description": "<p>xinh</p>",
+        "price": "200000",
+        "created_at": "2019-10-07 09:27:53",
+        "updated_at": "2019-10-18 09:20:50"
+    },
+    {
+        "id": 37,
+        "name": "chad",
+        "image": "52297904_395037364389175_8166579450884915200_n.jpg",
+        "description": "<p>ff</p>",
+        "price": "20000000",
+        "created_at": "2019-10-08 09:15:15",
+        "updated_at": null
+    },
+    {
+        "id": 38,
+        "name": "44",
+        "image": "52297904_395037364389175_8166579450884915200_n.jpg",
+        "description": "<p>444</p>",
+        "price": "2.000",
+        "created_at": "2019-10-11 12:32:44",
+        "updated_at": null
+    },
+    {
+        "id": 39,
+        "name": "Iphone",
+        "image": "52297904_395037364389175_8166579450884915200_n.jpg",
+        "description": "<p>xinh</p>",
+        "price": "20000000",
+        "created_at": "2019-10-26 12:37:22",
+        "updated_at": null
+    },
+    {
+        "id": 40,
+        "name": "22",
+        "image": "64266357_451633672062877_229471001589579776_o.jpg",
+        "description": "<p>222</p>\r\n\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\">&nbsp;</div>",
+        "price": "22",
+        "created_at": "2019-10-31 01:39:19",
+        "updated_at": null
+    }
+]

@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
-import Footer from "./Footer/Footer";
-import Pane from "./Pane";
-import Content from "./Content/Content";
+import Footer from "./footer/footer";
+import Pane from "./pane";
+import Content from "./content/content";
 export default class Example extends Component {
   render() {
     return (

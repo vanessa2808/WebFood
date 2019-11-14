@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Home from "./Home";
-import Content from "./Content/Content";
-import Contact from "./Contact/Contact";
-import Product from "./Product/Product";
-import Blog from "./Blog/Blog";
-import About from "./About/About";
+import Home from "./home";
+import Content from "./content/content";
+import Contact from "./contact/contact";
+import Product from "./product/product";
+import Blog from "./blog/blog";
+import About from "./about/about";
 
 import Login from "./Login/Login";
 import Register from "./Register/Register";
