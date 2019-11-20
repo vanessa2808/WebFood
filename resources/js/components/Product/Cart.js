@@ -4,16 +4,7 @@ class Cart extends Component {
 	render() {
 		return(
 			<div>
-  <div className="hero-wrap hero-bread" style={{backgroundImage: 'url("./images/bg_1.jpg")'}}>
-    <div className="container">
-      <div className="row no-gutters slider-text align-items-center justify-content-center">
-        <div className="col-md-9 ftco-animate text-center">
-          <p className="breadcrumbs"><span className="mr-2"><a href="#">Home</a></span> <span>Cart</span></p>
-          <h1 className="mb-0 bread">My Cart</h1>
-        </div>
-      </div>
-    </div>
-  </div>
+  
   <section className="ftco-section ftco-cart">
     <div className="container">
       <div className="row">

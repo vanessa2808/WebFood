@@ -36,7 +36,7 @@
                 <td>{{ Auth::user()->name }}</td>
                 <td>{{$products->name}}</td>
                 <td><img src="admin/uploads/products/{{$products->image}}" width="100px"></td>
-                <td>{{number_format($products->price,2)}}</td>
+                <td>{{$products->price}}</td>
                 <td>{{$products->description}}</td>
                 <td>
                   <a href="/admin/products/edit_products/{{$products->id}}" class="btn btn-primary">Edit</a>

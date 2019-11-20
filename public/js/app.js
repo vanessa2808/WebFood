@@ -74547,6 +74547,28 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/product/image/64266357_451633672062877_229471001589579776_o.jpg":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/product/image/64266357_451633672062877_229471001589579776_o.jpg ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/64266357_451633672062877_229471001589579776_o.jpg?18ff2cc3e3a5b3f8c773d29887c8014f";
+
+/***/ }),
+
+/***/ "./resources/js/components/product/image/bg_1.jpg":
+/*!********************************************************!*\
+  !*** ./resources/js/components/product/image/bg_1.jpg ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/bg_1.jpg?32ff0a73260c38a023de4ea2d603b798";
+
+/***/ }),
+
 /***/ "./resources/js/components/product/product.js":
 /*!****************************************************!*\
   !*** ./resources/js/components/product/product.js ***!
@@ -74578,17 +74600,21 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var Shop =
+__webpack_require__(/*! ./image/bg_1.jpg */ "./resources/js/components/product/image/bg_1.jpg");
+
+__webpack_require__(/*! ./image/64266357_451633672062877_229471001589579776_o.jpg */ "./resources/js/components/product/image/64266357_451633672062877_229471001589579776_o.jpg");
+
+var Product =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Shop, _Component);
+  _inherits(Product, _Component);
 
-  function Shop(props) {
+  function Product(props) {
     var _this;
 
-    _classCallCheck(this, Shop);
+    _classCallCheck(this, Product);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Shop).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Product).call(this, props));
     _this.state = {
       produts: [],
       loading: true
@@ -74596,7 +74622,7 @@ function (_Component) {
     return _this;
   }
 
-  _createClass(Shop, [{
+  _createClass(Product, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -74637,23 +74663,54 @@ function (_Component) {
       }, "Home")), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Products")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "mb-0 bread"
       }, "Products"))))), this.state.produts.map(function (product) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "row"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col-md-12"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "product"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           key: product.id,
-          src: product.image,
+          src: "{require(`${./product.image}`)}",
           crossOrigin: "anonymous "
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          key: product.name
-        }, " ", product.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          key: product.price
-        }, "price: ", product.price));
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "text py-3 pb-4 px-3 text-center"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#"
+        }, product.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "d-flex"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "pricing"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "price"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.price)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "bottom-area d-flex px-3"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "m-auto d-flex"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#",
+          className: "add-to-cart d-flex justify-content-center align-items-center text-center"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "ion-ios-menu"
+        }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "/Cart",
+          className: "buy-now d-flex justify-content-center align-items-center mx-1"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "ion-ios-cart"
+        }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#",
+          className: "heart d-flex justify-content-center align-items-center "
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "ion-ios-heart"
+        })))))))));
       }));
     }
   }]);
 
-  return Shop;
+  return Product;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Shop);
+/* harmony default export */ __webpack_exports__["default"] = (Product);
 
 /***/ }),
 
